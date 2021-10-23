@@ -1,4 +1,5 @@
 import {useEffect,useState} from 'react'
+import { LoadingAnimation } from '../helpers/progress'
 
 export const MainCard = (props)=>{
  const[animate,setAnimate] = useState(true)

@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('http://fonts.cdnfonts.com/css/pokemon-solid');
+
 body{
   @apply bg-gray-50;
 }
@@ -118,9 +120,40 @@ body{
    @apply p-5 m-3 md:text-8xl text-left text-6xl md:text-center font-extrabold tracking-wider leading-relaxed;
 }
 
+
+.loading{
+ animation: spin360 1s ease-in-out 0ms infinite forwards ;
+}
+
+@keyframes spin360{
+  0%{
+    transform: rotateZ(0deg);
+    
+  }
+  100%{
+    transform: rotateZ(360deg);
+  }
+}
+
+.loadingAnimate{
+  font-family: monospace;
+  animation: opacity 2s ease-in-out 0ms infinite alternate ;
+}
+
+@keyframes opacity{
+  0%{
+    opacity:1;
+    
+  }
+  100%{
+     opacity:0;
+
+  }
+}
+
 .pokemon{
  color:#c7a008;
- font-family: 'Pokemon'; 
+ font-family: 'Pokemon Solid', sans-serif ;
  text-shadow: 
 -7px -7px 0px #3c5aa6,-7px -6px 0px #3c5aa6,-7px -5px 0px #3c5aa6,-7px -4px 0px #3c5aa6,-7px -3px 0px #3c5aa6,-7px -2px 0px #3c5aa6,-7px -1px 0px #3c5aa6,-7px 0px 0px #3c5aa6,-7px 1px 0px #3c5aa6,-7px 2px 0px #3c5aa6,-7px 3px 0px #3c5aa6,-7px 4px 0px #3c5aa6,-7px 5px 0px #3c5aa6,-7px 6px 0px #3c5aa6,-7px 7px 0px #3c5aa6,-6px -7px 0px #3c5aa6,-6px -6px 0px #3c5aa6,-6px -5px 0px #3c5aa6,-6px -4px 0px #3c5aa6,-6px -3px 0px #3c5aa6,-6px -2px 0px #3c5aa6,-6px -1px 0px #3c5aa6,-6px 0px 0px #3c5aa6,-6px 1px 0px #3c5aa6,-6px 2px 0px #3c5aa6,-6px 3px 0px #3c5aa6,-6px 4px 0px #3c5aa6,-6px 5px 0px #3c5aa6,-6px 6px 0px #3c5aa6,-6px 7px 0px #3c5aa6,-5px -7px 0px #3c5aa6,-5px -6px 0px #3c5aa6,-5px -5px 0px #3c5aa6,-5px -4px 0px #3c5aa6,-5px -3px 0px #3c5aa6,-5px -2px 0px #3c5aa6,-5px -1px 0px #3c5aa6,-5px 0px 0px #3c5aa6,-5px 1px 0px #3c5aa6,-5px 2px 0px #3c5aa6,-5px 3px 0px #3c5aa6,-5px 4px 0px #3c5aa6,-5px 5px 0px #3c5aa6,-5px 6px 0px #3c5aa6,-5px 7px 0px #3c5aa6,-4px -7px 0px #3c5aa6,-4px -6px 0px #3c5aa6,-4px -5px 0px #3c5aa6,-4px -4px 0px #3c5aa6,-4px -3px 0px #3c5aa6,-4px -2px 0px #3c5aa6,-4px -1px 0px #3c5aa6,-4px 0px 0px #3c5aa6,-4px 1px 0px #3c5aa6,-4px 2px 0px #3c5aa6,-4px 3px 0px #3c5aa6,-4px 4px 0px #3c5aa6,-4px 5px 0px #3c5aa6,-4px 6px 0px #3c5aa6,-4px 7px 0px #3c5aa6,-3px -7px 0px #3c5aa6,-3px -6px 0px #3c5aa6,-3px -5px 0px #3c5aa6,-3px -4px 0px #3c5aa6,-3px -3px 0px #3c5aa6,-3px -2px 0px #3c5aa6,-3px -1px 0px #3c5aa6,-3px 0px 0px #3c5aa6,-3px 1px 0px #3c5aa6,-3px 2px 0px #3c5aa6,-3px 3px 0px #3c5aa6,-3px 4px 0px #3c5aa6,-3px 5px 0px #3c5aa6,-3px 6px 0px #3c5aa6,-3px 7px 0px #3c5aa6,-2px -7px 0px #3c5aa6,-2px -6px 0px #3c5aa6,-2px -5px 0px #3c5aa6,-2px -4px 0px #3c5aa6,-2px -3px 0px #3c5aa6,-2px -2px 0px #3c5aa6,-2px -1px 0px #3c5aa6,-2px 0px 0px #3c5aa6,-2px 1px 0px #3c5aa6,-2px 2px 0px #3c5aa6,-2px 3px 0px #3c5aa6,-2px 4px 0px #3c5aa6,-2px 5px 0px #3c5aa6,-2px 6px 0px #3c5aa6,-2px 7px 0px #3c5aa6,-1px -7px 0px #3c5aa6,-1px -6px 0px #3c5aa6,-1px -5px 0px #3c5aa6,-1px -4px 0px #3c5aa6,-1px -3px 0px #3c5aa6,-1px -2px 0px #3c5aa6,-1px -1px 0px #3c5aa6,-1px 0px 0px #3c5aa6,-1px 1px 0px #3c5aa6,-1px 2px 0px #3c5aa6,-1px 3px 0px #3c5aa6,-1px 4px 0px #3c5aa6,-1px 5px 0px #3c5aa6,-1px 6px 0px #3c5aa6,-1px 7px 0px #3c5aa6,0px -7px 0px #3c5aa6,0px -6px 0px #3c5aa6,0px -5px 0px #3c5aa6,0px -4px 0px #3c5aa6,0px -3px 0px #3c5aa6,0px -2px 0px #3c5aa6,0px -1px 0px #3c5aa6,0px 0px 0px #3c5aa6,0px 1px 0px #3c5aa6,0px 2px 0px #3c5aa6,0px 3px 0px #3c5aa6,0px 4px 0px #3c5aa6,0px 5px 0px #3c5aa6,0px 6px 0px #3c5aa6,0px 7px 0px #3c5aa6,1px -7px 0px #3c5aa6,1px -6px 0px #3c5aa6,1px -5px 0px #3c5aa6,1px -4px 0px #3c5aa6,1px -3px 0px #3c5aa6,1px -2px 0px #3c5aa6,1px -1px 0px #3c5aa6,1px 0px 0px #3c5aa6,1px 1px 0px #3c5aa6,1px 2px 0px #3c5aa6,1px 3px 0px #3c5aa6,1px 4px 0px #3c5aa6,1px 5px 0px #3c5aa6,1px 6px 0px #3c5aa6,1px 7px 0px #3c5aa6,2px -7px 0px #3c5aa6,2px -6px 0px #3c5aa6,2px -5px 0px #3c5aa6,2px -4px 0px #3c5aa6,2px -3px 0px #3c5aa6,2px -2px 0px #3c5aa6,2px -1px 0px #3c5aa6,2px 0px 0px #3c5aa6,2px 1px 0px #3c5aa6,2px 2px 0px #3c5aa6,2px 3px 0px #3c5aa6,2px 4px 0px #3c5aa6,2px 5px 0px #3c5aa6,2px 6px 0px #3c5aa6,2px 7px 0px #3c5aa6,3px -7px 0px #3c5aa6,3px -6px 0px #3c5aa6,3px -5px 0px #3c5aa6,3px -4px 0px #3c5aa6,3px -3px 0px #3c5aa6,3px -2px 0px #3c5aa6,3px -1px 0px #3c5aa6,3px 0px 0px #3c5aa6,3px 1px 0px #3c5aa6,3px 2px 0px #3c5aa6,3px 3px 0px #3c5aa6,3px 4px 0px #3c5aa6,3px 5px 0px #3c5aa6,3px 6px 0px #3c5aa6,3px 7px 0px #3c5aa6,4px -7px 0px #3c5aa6,4px -6px 0px #3c5aa6,4px -5px 0px #3c5aa6,4px -4px 0px #3c5aa6,4px -3px 0px #3c5aa6,4px -2px 0px #3c5aa6,4px -1px 0px #3c5aa6,4px 0px 0px #3c5aa6,4px 1px 0px #3c5aa6,4px 2px 0px #3c5aa6,4px 3px 0px #3c5aa6,4px 4px 0px #3c5aa6,4px 5px 0px #3c5aa6,4px 6px 0px #3c5aa6,4px 7px 0px #3c5aa6,5px -7px 0px #3c5aa6,5px -6px 0px #3c5aa6,5px -5px 0px #3c5aa6,5px -4px 0px #3c5aa6,5px -3px 0px #3c5aa6,5px -2px 0px #3c5aa6,5px -1px 0px #3c5aa6,5px 0px 0px #3c5aa6,5px 1px 0px #3c5aa6,5px 2px 0px #3c5aa6,5px 3px 0px #3c5aa6,5px 4px 0px #3c5aa6,5px 5px 0px #3c5aa6,5px 6px 0px #3c5aa6,5px 7px 0px #3c5aa6,6px -7px 0px #3c5aa6,6px -6px 0px #3c5aa6,6px -5px 0px #3c5aa6,6px -4px 0px #3c5aa6,6px -3px 0px #3c5aa6,6px -2px 0px #3c5aa6,6px -1px 0px #3c5aa6,6px 0px 0px #3c5aa6,6px 1px 0px #3c5aa6,6px 2px 0px #3c5aa6,6px 3px 0px #3c5aa6,6px 4px 0px #3c5aa6,6px 5px 0px #3c5aa6,6px 6px 0px #3c5aa6,6px 7px 0px #3c5aa6,7px -7px 0px #3c5aa6,7px -6px 0px #3c5aa6,7px -5px 0px #3c5aa6,7px -4px 0px #3c5aa6,7px -3px 0px #3c5aa6,7px -2px 0px #3c5aa6,7px -1px 0px #3c5aa6,7px 0px 0px #3c5aa6,7px 1px 0px #3c5aa6,7px 2px 0px #3c5aa6,7px 3px 0px #3c5aa6,7px 4px 0px #3c5aa6,7px 5px 0px #3c5aa6,7px 6px 0px #3c5aa6,7px 7px 0px #3c5aa6;
 

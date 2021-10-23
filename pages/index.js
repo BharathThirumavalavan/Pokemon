@@ -2,6 +2,8 @@ import Head from 'next/head'
 import  PokemonCard  from '../components/pokemonCard'
 import axios from 'axios'
 import { SearchedPokemon } from '../components/searchedPokemon'
+import { LoadingAnimation } from '../helpers/progress'
+
 
 export default function Home(props) {
   
@@ -9,16 +11,13 @@ export default function Home(props) {
     <>
       <Head>
         <title>Pokemon</title>
-        <link
-          href='//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon'
-          rel='stylesheet'
-          type='text/css'
-        />
+        <link href="http://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet"/>
       </Head>
-      <div className='sticky top-0'>
+      <div>
         <header className='p-2 cursor-pointer'>
           <h1 className=' pokemon heading '>Pokemon Finder</h1>
         </header>
+        <LoadingAnimation/>
         <section>
           <SearchedPokemon />
         </section>
@@ -26,6 +25,7 @@ export default function Home(props) {
         <main className='flex flex-wrap justify-center items-center relative  container mx-auto'>
           <PokemonCard {...props} />
         </main>
+
       </div>
     </>
   )
@@ -36,7 +36,7 @@ export async function getStaticProps() {
 
   try {
     response = await axios.get(
-      'https://pokeapi.co/api/v2/pokemon?limit=50&offset=75'
+      'https://pokeapi.co/api/v2/pokemon?limit=50&offset=45'
     )
    
     const pokemonURL = response.data.results.map((pokemon) => {
